@@ -1,4 +1,4 @@
-package exp3;
+
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class BookStoreCredit {
         System.out.println("Name: " + name + ", GPA: " + gpa + ", Credits: " + credits + "$");
 
     }
-    public static void main(){
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter your name: ");
