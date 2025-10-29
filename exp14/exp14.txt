@@ -1,0 +1,17 @@
+function calculateSubtotal(quantity, pricePerDonut) {
+  let numberOfDonuts;
+
+  if (typeof quantity === "string" && quantity.toLowerCase() === "dozen") {
+    numberOfDonuts = 12;
+  } else {
+    numberOfDonuts = Number(quantity);  // convert to number if not "dozen"
+  }
+
+  let subtotal = numberOfDonuts * pricePerDonut;
+  return subtotal;
+}
+
+
+// Example calls:
+console.log(calculateSubtotal("dozen", 10)); // Output: 120
+console.log(calculateSubtotal(5, 10));       // Output: 50
