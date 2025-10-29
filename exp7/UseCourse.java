@@ -1,4 +1,4 @@
-package exp7;
+
 
 import java.util.Scanner;
 
@@ -26,3 +26,4 @@ public class UseCourse {
         sc.close();
     }
 }
+
