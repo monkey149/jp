@@ -12,3 +12,24 @@ for(let i=0;i<=100;i++){
 		 console.log(i);
 	}
 }
+
+// Function to check if two strings are anagrams
+function areAnagrams(str1, str2) {
+  // Remove spaces and convert to lowercase for uniform comparison
+  str1 = str1.replace(/\s+/g, '').toLowerCase();
+  str2 = str2.replace(/\s+/g, '').toLowerCase();
+
+  // If lengths differ, they cannot be anagrams
+  if (str1.length !== str2.length) return false;
+
+  // Sort characters and compare
+  let sortedStr1 = str1.split('').sort().join('');
+  let sortedStr2 = str2.split('').sort().join('');
+
+  return sortedStr1 === sortedStr2;
+}
+
+// Example usage
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world"));   // false
+console.log(areAnagrams("Debit Card", "Bad Credit")); // true
